@@ -33,7 +33,9 @@
             android:onClick="sendMessage"
             android:src="@android:drawable/ic_menu_send" />
     </LinearLayout>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
@@ -46,8 +48,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SmsFilterActivity" >
-<!--  
-    <ScrollView
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.06"
+        android:text="@string/astus"
+        android:textColor="#125152" />
+    
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,12 +65,11 @@
         android:clipChildren="true" >
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="304dp"
+            android:layout_height="138dp"
             android:orientation="vertical" >
         </LinearLayout>
-    </ScrollView>
--->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -75,7 +83,9 @@
             android:ems="10"
             android:hint="@string/msg_hint"
             android:maxLines="3"
-            android:minLines="2" >
+            android:minLines="2"
+            android:textColorHint="#fff"
+            android:textStyle="italic" >
 
             <requestFocus />
         </AutoCompleteTextView>
@@ -89,18 +99,16 @@
             android:onClick="sendMessage"
             android:src="@android:drawable/ic_menu_send" />
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="130dp"
+            android:layout_height="90dp"
+            android:text="@string/usage"
+            android:textColor="#125152"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            android:typeface="monospace" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|fill"
-        android:text="@string/usage"
-        android:textColor="#fff"
-        android:textSize="@dimen/apheight"
-        android:textStyle="bold|italic"
-        android:typeface="monospace" />
-
 </LinearLayout>
+
 </com.example.smsfilter.FlyOutContainer>
